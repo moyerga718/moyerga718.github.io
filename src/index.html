@@ -1,0 +1,94 @@
+<!---overarching html tag? idk if this is necessary --->
+<!DOCTYPE html>
+<html>
+<!--- Section for font family --->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<!--- body element --->
+
+  <body>
+    <section class ="btn-section-class" id="red-btn-section">
+      <div class="triangle-right"></div>
+      <button class="red-btn" id="r2"  value=2  onclick="checkBox(redArr,this.value,this.id,'r')">2</button>
+      <button class="red-btn" id="r3"  value=3  onclick="checkBox(redArr,this.value,this.id,'r')">3</button>
+      <button class="red-btn" id="r4"  value=4  onclick="checkBox(redArr,this.value,this.id,'r')">4</button>
+      <button class="red-btn" id="r5"  value=5  onclick="checkBox(redArr,this.value,this.id,'r')">5</button>
+      <button class="red-btn" id="r6"  value=6  onclick="checkBox(redArr,this.value,this.id,'r')">6</button>
+      <button class="red-btn" id="r7"  value=7  onclick="checkBox(redArr,this.value,this.id,'r')">7</button>
+      <button class="red-btn" id="r8"  value=8  onclick="checkBox(redArr,this.value,this.id,'r')">8</button>
+      <button class="red-btn" id="r9"  value=9  onclick="checkBox(redArr,this.value,this.id,'r')">9</button>
+      <button class="red-btn" id="r10" value=10 onclick="checkBox(redArr,this.value,this.id,'r')">10</button>
+      <button class="red-btn" id="r11" value=11 onclick="checkBox(redArr,this.value,this.id,'r')">11</button>
+      <button class="red-btn" id="r12" value=12 onclick="checkBox(redArr,this.value,this.id,'r')">12</button>
+      <hr id="red-hr"></hr>
+      <button class="red-btn" id="rL"></button>
+      <button class="red-btn" id="rUndo" onclick="undoLastMove(redArr,'r')"></button>
+      <button class="pen-btn" id="p1" value=1 onclick="clickPenBox(this.id,this.value)">P</button>
+    </section>
+    <section class="btn-section-class" id="yel-btn-section">
+      <div class="triangle-right"></div>
+      <button class="yel-btn" id="y2"  value=2  onclick="checkBox(yelArr,this.value,this.id,'y')">2</button>
+      <button class="yel-btn" id="y3"  value=3  onclick="checkBox(yelArr,this.value,this.id,'y')">3</button>
+      <button class="yel-btn" id="y4"  value=4  onclick="checkBox(yelArr,this.value,this.id,'y')">4</button>
+      <button class="yel-btn" id="y5"  value=5  onclick="checkBox(yelArr,this.value,this.id,'y')">5</button>
+      <button class="yel-btn" id="y6"  value=6  onclick="checkBox(yelArr,this.value,this.id,'y')">6</button>
+      <button class="yel-btn" id="y7"  value=7  onclick="checkBox(yelArr,this.value,this.id,'y')">7</button>
+      <button class="yel-btn" id="y8"  value=8  onclick="checkBox(yelArr,this.value,this.id,'y')">8</button>
+      <button class="yel-btn" id="y9"  value=9  onclick="checkBox(yelArr,this.value,this.id,'y')">9</button>
+      <button class="yel-btn" id="y10" value=10 onclick="checkBox(yelArr,this.value,this.id,'y')">10</button>
+      <button class="yel-btn" id="y11" value=11 onclick="checkBox(yelArr,this.value,this.id,'y')">11</button>
+      <button class="yel-btn" id="y12" value=12 onclick="checkBox(yelArr,this.value,this.id,'y')">12</button>
+      <hr id="yel-hr"></hr>
+      <button class="yel-btn" id="yL"></button>
+      <button class="yel-btn" id="yUndo" onclick="undoLastMove(yelArr,'y')"></button>
+      <button class="pen-btn" id="p2" value=2 onclick="clickPenBox(this.id,this.value)">P</button>
+    </section> 
+    <section class="btn-section-class" id="grn-btn-section">
+      <div class="triangle-right"></div>
+      <button class="grn-btn" id="g12"  value=12  onclick="checkBox(grnArr,this.value,this.id,'g')">12</button>
+      <button class="grn-btn" id="g11"  value=11  onclick="checkBox(grnArr,this.value,this.id,'g')">11</button>
+      <button class="grn-btn" id="g10"  value=10  onclick="checkBox(grnArr,this.value,this.id,'g')">10</button>
+      <button class="grn-btn" id="g9"   value=9   onclick="checkBox(grnArr,this.value,this.id,'g')">9</button>
+      <button class="grn-btn" id="g8"   value=8   onclick="checkBox(grnArr,this.value,this.id,'g')">8</button>
+      <button class="grn-btn" id="g7"   value=7   onclick="checkBox(grnArr,this.value,this.id,'g')">7</button>
+      <button class="grn-btn" id="g6"   value=6   onclick="checkBox(grnArr,this.value,this.id,'g')">6</button>
+      <button class="grn-btn" id="g5"   value=5   onclick="checkBox(grnArr,this.value,this.id,'g')">5</button>
+      <button class="grn-btn" id="g4"   value=4   onclick="checkBox(grnArr,this.value,this.id,'g')">4</button>
+      <button class="grn-btn" id="g3"   value=3   onclick="checkBox(grnArr,this.value,this.id,'g')">3</button>
+      <button class="grn-btn" id="g2"   value=2   onclick="checkBox(grnArr,this.value,this.id,'g')">2</button>
+      <hr id="grn-hr"></hr>
+      <button class="grn-btn" id="gL"></button>
+      <button class="grn-btn" id="gUndo" onclick="undoLastMove(grnArr,'g')"></button>
+      <button class="pen-btn" id="p3" value=3 onclick="clickPenBox(this.id,this.value)">P</button>
+    </section> 
+    <section class="btn-section-class" id="blu-btn-section">
+      <div class="triangle-right"></div>
+      <button class="blu-btn" id="b12" value=12 onclick="checkBox(bluArr,this.value,this.id,'b')">12</button>
+      <button class="blu-btn" id="b11" value=11 onclick="checkBox(bluArr,this.value,this.id,'b')">11</button>
+      <button class="blu-btn" id="b10" value=10 onclick="checkBox(bluArr,this.value,this.id,'b')">10</button>
+      <button class="blu-btn" id="b9"  value=9  onclick="checkBox(bluArr,this.value,this.id,'b')">9</button>
+      <button class="blu-btn" id="b8"  value=8  onclick="checkBox(bluArr,this.value,this.id,'b')">8</button>
+      <button class="blu-btn" id="b7"  value=7  onclick="checkBox(bluArr,this.value,this.id,'b')">7</button>
+      <button class="blu-btn" id="b6"  value=6  onclick="checkBox(bluArr,this.value,this.id,'b')">6</button>
+      <button class="blu-btn" id="b5"  value=5  onclick="checkBox(bluArr,this.value,this.id,'b')">5</button>
+      <button class="blu-btn" id="b4"  value=4  onclick="checkBox(bluArr,this.value,this.id,'b')">4</button>
+      <button class="blu-btn" id="b3"  value=3  onclick="checkBox(bluArr,this.value,this.id,'b')">3</button>
+      <button class="blu-btn" id="b2"  value=2  onclick="checkBox(bluArr,this.value,this.id,'b')">2</button>
+      <hr id="blu-hr"></hr>
+      <button class="blu-btn" id="bL"></button>
+      <button class="blu-btn" id="bUndo" onclick="undoLastMove(bluArr,'b')"></button>
+      <button class="pen-btn" id="p4" value=4 onclick="clickPenBox(this.id,this.value)">P</button>
+    </section>
+    <section class="btn-section-class" id="total-section">
+      <div class="total-class" id="red-total">0</div>
+      <div class="total-class" id="yel-total">0</div>
+      <div class="total-class" id="grn-total">0</div>
+      <div class="total-class" id="blu-total">0</div>
+      <div class="total-class" id="pen-total">0</div>
+      <div class="total-class" id="final-total">0</div>
+      <button id="clear-btn" onclick="clrBox()">C</button>
+      <button class="pen-btn" onclick="undoPenCheck()">U</button>
+    </section>
+  </body>
+</html>
