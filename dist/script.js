@@ -24,6 +24,11 @@ let yelCount = 0
 let grnCount = 0
 let bluCount = 0
 let penCount = 0
+let redTot = 0
+let yelTot = 0
+let grnTot = 0
+let bluTot = 0
+let penTot = 0
 
 //Call resetBtns() upon reloading program.
 resetBtns()
@@ -47,6 +52,12 @@ function resetBtns() {
   document.getElementById("yL").disabled = true;
   document.getElementById("gL").disabled = true;
   document.getElementById("bL").disabled = true;
+  redTotEl.textContent = ""
+  yelTotEl.textContent = ""
+  grnTotEl.textContent = ""
+  bluTotEl.textContent = ""
+  penTotEl.textContent = ""
+  finTotEl.textContent = ""
 }
 //Function that activates whenever a "value" button is clicked. 
 function checkBox(arr,val,id,colorLtr) {
@@ -128,18 +139,12 @@ function scoreCalc(counter) {
 }
 
 function finScoreCalc() {
-  let redTot = scoreCalc(redCount)
-  let yelTot = scoreCalc(yelCount)
-  let grnTot = scoreCalc(grnCount)
-  let bluTot = scoreCalc(bluCount)
-  let penTot = penCount * 5
-  let finTot = redTot + yelTot + grnTot + bluTot - penTot
-  redTotEl.textContent = redTot
-  yelTotEl.textContent = yelTot
-  grnTotEl.textContent = grnTot
-  bluTotEl.textContent = bluTot
-  penTotEl.textContent = penTot
-  finTotEl.textContent = finTot
+  redTot = scoreCalc(redCount)
+  yelTot = scoreCalc(yelCount)
+  grnTot = scoreCalc(grnCount)
+  bluTot = scoreCalc(bluCount)
+  penTot = penCount * 5
+  finTot = redTot + yelTot + grnTot + bluTot - penTot
 }
 
 function undoLastMove(arr,colorLtr) {
@@ -235,6 +240,15 @@ function resetText(arr,colorLtr) {
   }
 }
 
+function showTotal() {
+  redTotEl.textContent = redTot
+  yelTotEl.textContent = yelTot
+  grnTotEl.textContent = grnTot
+  bluTotEl.textContent = bluTot
+  penTotEl.textContent = penTot
+  finTotEl.textContent = finTot
+}
+
 function clrBox() {
   resetText(redArr,"r")
   resetText(yelArr,"y")
@@ -244,11 +258,17 @@ function clrBox() {
   yelArr = []
   grnArr = []
   bluArr = []
+  penArr = []
   redCount = 0
   yelCount = 0
   grnCount = 0
   bluCount = 0
   penCount = 0
+  redTot = 0
+  yelTot = 0
+  grnTot = 0
+  bluTot = 0
+  penTot = 0
   resetBtns()
   finScoreCalc()
 }

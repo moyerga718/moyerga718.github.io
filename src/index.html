@@ -8,7 +8,7 @@
 <!--- body element --->
 
   <body>
-    <section class ="btn-section-class" id="red-btn-section">
+    <section class="btn-section-class" id="red-btn-section">
       <div class="triangle-right"></div>
       <button class="red-btn" id="r2"  value=2  onclick="checkBox(redArr,this.value,this.id,'r')">2</button>
       <button class="red-btn" id="r3"  value=3  onclick="checkBox(redArr,this.value,this.id,'r')">3</button>
@@ -81,12 +81,13 @@
       <button class="pen-btn" id="p4" value=4 onclick="clickPenBox(this.id,this.value)">P</button>
     </section>
     <section class="btn-section-class" id="total-section">
-      <div class="total-class" id="red-total">0</div>
-      <div class="total-class" id="yel-total">0</div>
-      <div class="total-class" id="grn-total">0</div>
-      <div class="total-class" id="blu-total">0</div>
-      <div class="total-class" id="pen-total">0</div>
-      <div class="total-class" id="final-total">0</div>
+      <div class="total-class" id="red-total"></div>
+      <div class="total-class" id="yel-total"></div>
+      <div class="total-class" id="grn-total"></div>
+      <div class="total-class" id="blu-total"></div>
+      <div class="total-class" id="pen-total"></div>
+      <div class="total-class" id="final-total"></div>
+      <button id="calc-btn" onclick="showTotal()"></button>
       <button id="clear-btn" onclick="clrBox()">C</button>
       <button class="pen-btn" onclick="undoPenCheck()">U</button>
     </section>

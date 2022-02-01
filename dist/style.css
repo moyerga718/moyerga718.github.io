@@ -110,7 +110,6 @@ hr {
   background: #f9e0e5;
   color: #d73f4c;
   border-color: #943037;
-  border-radius: 5px;
 }
 
 .yel-btn {
@@ -142,6 +141,14 @@ hr {
 .pen-btn:disabled {
   color: red;
   background: black;
+}
+
+#calc-btn {
+  background-image:url("https://toppng.com/public/uploads/preview/calculator-icon-picture-free-stock-calculator-white-icon-1155343545289pqze7fi8.png");
+  background-size:75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
 }
 
 #rL {
@@ -223,7 +230,7 @@ hr {
   align-items: center;
   justify-content: center;
   width: 70px;
-  height: 50px; 
+  height: 45px; 
   border-width: 3px ;
   font-size: 30px;
 }
